@@ -1,11 +1,6 @@
-import React from "react";
+import * as Types from "../utils/types";
 
-interface props {
-  winner: String | null;
-  onRestart: React.MouseEventHandler<HTMLButtonElement>;
-}
-
-const GameOver = ({ winner, onRestart }: props) => {
+const GameOver = ({ winner, onRestart }: Types.GameOverProps) => {
   return (
     <div id="game-over">
       <h2>Game Over!</h2>

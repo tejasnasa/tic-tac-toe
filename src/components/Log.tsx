@@ -1,16 +1,6 @@
-interface GameTurn {
-  square: {
-    row: number;
-    col: number;
-  };
-  player: string;
-}
+import * as Types from "../utils/types";
 
-interface props {
-  turns: Array<GameTurn>;
-}
-
-const Log = ({ turns }: props) => {
+const Log = ({ turns }: Types.LogProps) => {
   return (
     <ol id="log">
       {turns.map((turn) => (

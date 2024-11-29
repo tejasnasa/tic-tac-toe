@@ -1,12 +1,7 @@
 import { useState } from "react";
+import * as Types from "../utils/types";
 
-interface props {
-  initialName: string;
-  symbol: string;
-  isActive: boolean;
-}
-
-const Player = ({ initialName, symbol, isActive, onChangeName }: props) => {
+const Player = ({ initialName, symbol, isActive, onChangeName }: Types.PlayerProps) => {
   const [isEditing, setIsEditing] = useState(false);
   const [name, setName] = useState<string>(initialName);
 
