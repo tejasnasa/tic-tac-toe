@@ -160,35 +160,57 @@ ol {
 }
 
 #game-board {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(5rem, 20vw));
+  grid-gap: 1rem;
   justify-content: center;
-  gap: 2rem;
-  margin: 3rem 0;
-  padding: 0;
-  flex-direction: column;
-}
-
-#game-board ol {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
+  margin: 2rem auto;
+  padding: 5rem;
+  max-width: 90vw;
 }
 
 #game-board button {
-  width: 8rem;
-  height: 8rem;
+  width: 100%;
+  aspect-ratio: 1;
   border: none;
   background: #aca788;
   color: #3f3b00;
-  font-size: 5rem;
+  font-size: calc(2rem + 1vw);
   cursor: pointer;
   font-family: "Caprasimo", cursive;
-  padding: 1rem;
+  padding: 0.5rem;
 }
+
+@media (max-width: 600px) {
+  #game-board {
+    grid-gap: 0.5rem;
+    padding: 3rem;
+  }
+  
+  .playerbox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .player {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .player-symbol {
+    align-self: center;
+    justify-self: center;
+    margin-left: 0;
+  }
+
+  #game-board button {
+    font-size: calc(1.5rem + 1vw);
+  }
+}
+
+
 
 #game-over {
   position: absolute;

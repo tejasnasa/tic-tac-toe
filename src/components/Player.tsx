@@ -17,7 +17,7 @@ const Player = ({ initialName, symbol, isActive, onChangeName }: Types.PlayerPro
   };
 
   return (
-    <li className={isActive ? "active" : undefined}>
+    <li className={`playerbox ${isActive ? "active" : undefined}`}>
       <span className="player">
         {!isEditing && <span className="player-name">{name}</span>}
         {isEditing && (
